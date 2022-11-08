@@ -21,7 +21,9 @@ DATABASES = {
 docker run --name mongodb -e MONGODB_USER=kartien -e MONGODB_PASSWORD=mischuros2 -p 27017:27017 -d mongo
 # Use postgres on docker 
 docker run --name some-postgres -e POSTGRES_USER=your-user -e POSTGRES_PASSWORD=mypassword -p 5432:5432 -d postgres
-
+docker start some-postgres
+docer exect -it some-postgres bash
+psql -U your-user --password
 ```
 ## Connect postgress
 ```bash
